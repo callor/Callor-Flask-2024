@@ -1,0 +1,19 @@
+<!-- 템플릿 및 상속 예시 -->
+<!-- 부모 템플릿(base.html) -->
+<html>
+  <head>
+    <title>Hi Flask</title>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
+
+<!-- 자식 템플릿(index.html) -->
+{% extends "base.html" %} {% block content %}
+<title>Hello from Flask</title>
+{% if name %}
+<h1>Hello {{ name }}!</h1>
+{% else %}
+<h1>Hello World!</h1>
+{% endif %} {% endblock %}
