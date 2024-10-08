@@ -13,7 +13,3 @@ def home():
     """ #사용자의 브라우저에 표시하려는 메시지 반환
 
 
-@bp.route('/question')
-def index():
-    question_list = Question.query.order_by(Question.create_date.desc())
-    return render_template('question/question_list.html', question_list=question_list)
